@@ -296,14 +296,6 @@
 <script src="js/functions.js"></script>
 <script>
     $(document).ready(function(){
-        var x = prompt("Please enter the 10 digit code:");
-        if (x == "6238559523") 
-        {
-            return true;
-        } 
-        else {
-            window.close();
-        }
        $('#form').submit(function (e){
             e.preventDefault();
             let posting = $.post('https://www.elvesonthecloud.com/api/send_email_to_royalmarkevents', $('#form').serialize());
