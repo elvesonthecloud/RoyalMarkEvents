@@ -1699,6 +1699,53 @@ i::before,i::after{
            Additional PAGES
 ====================================== */
 
+.contact-banner{
+    background: url("../img/contact-cover.jpg") no-repeat;
+    padding-top: 190px;
+    padding-bottom: 160px;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: top center;
+}
+
+.contact-banner h1{
+    margin-bottom: 25px;
+    font-family: 'Teko', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.contact-banner p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
+
+.services-banner{
+    background: url("../img/services-cover.jpg") no-repeat;
+    padding-top: 190px;
+    padding-bottom: 160px;
+    background-attachment: inherit;
+    background-size: cover;
+    background-position: top center;
+}
+
+.services-banner h1{
+    margin-bottom: 25px;
+    font-family: 'Teko', sans-serif;
+    font-size: 60px;
+    font-weight: 500;
+    color: #FFFFFF;
+}
+
+.services-banner p{
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    margin-bottom: 10px;
+    color: #FFFFFF;
+}
 .blog-banner{
     background: url("../img/blog-cover.jpg") no-repeat;
     padding-top: 190px;
