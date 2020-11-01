@@ -15,23 +15,8 @@
     <link rel="stylesheet" href="vendor/css/jquery-ui.bundle.css">
     <link rel="stylesheet" href="css/style.css">
     <style>
-
-        input,
-        input::-webkit-input-placeholder {
-            font-size: 20px;
-            line-height: 3;
-        }
-
-        option,
-        option::-webkit-input-placeholder {
-            font-size: 20px;
-            line-height: 3;
-        }
-
-        textarea,
-        textarea::-webkit-input-placeholder {
-            font-size: 20px;
-            line-height: 3;
+        input[type="text"],input[type="email"],input[type="number"],input[type="date"]  {
+            font-size:30px;
         }
     </style>
 </head>
@@ -165,7 +150,7 @@
                             @
                         </p>
                         <p class="darkcolor wow fadeIn" data-wow-delay="400ms">
-                            Kudakkada Bildings,Kaikulangara North,
+                            Kudakkada Buildings,Kaikulangara North,
                         </p>
                         <p class="darkcolor wow fadeIn" data-wow-delay="400ms">
                             Kollam, Kerala
@@ -186,15 +171,13 @@
         </div>
     </div>
 </section>
-<section class="padding">
+<br/>
+<section>
     <div class="container">
         <div class="row shadow p-3 mb-5 bg-white rounded">
             <div class="col-md-11">
                 <form id="form">
                     <div class="row">
-                        <div class="col-md-12 col-sm-12">
-                            <div id="result"></div>
-                        </div>
                         <div class="col-md-12">
                             <input type="text" class="form-control" name="name" placeholder="Name" required>
                         </div>
@@ -206,44 +189,24 @@
                                    required>
                         </div>
                         <div class="col-md-6">
-                            <select class=" form-control" name="location" required>
+                            <select class="form-control" name="location" required style="font-size: 25px;">
                                 <option>--------- Select Location ----------</option>
-
-
                                 <option value="Adoor">Adoor</option>
                                 <option value="Alappuzha">Alappuzha</option>
                                 <option value="Anchal">Anchal</option>
-                                <option value="Andaman and Nicobar Islands">Andaman and Nicobar Islands</option>
-                                <option value="Andhra Pradesh">Andhra Pradesh</option>
-                                <option value="Arunachal Pradesh">Arunachal Pradesh</option>
-                                <option value="Assam">Assam</option>
                                 <option value="Attingal">Attingal</option>
                                 <option value="Beypore">Beypore</option>
-                                <option value="Bihar">Bihar</option>
                                 <option value="Chalakkudy">Chalakkudy</option>
-                                <option value="Chandigarh">Chandigarh</option>
                                 <option value="Chavakkad">Chavakkad</option>
                                 <option value="Cherthala">Cherthala</option>
-                                <option value="Chhattisgarh">Chhattisgarh</option>
-                                <option value="Dadar and Nagar Haveli">Dadar and Nagar Haveli</option>
-                                <option value="Daman and Diu">Daman and Diu</option>
-                                <option value="Delhi">Delhi</option>
-                                <option value="Goa">Goa</option>
-                                <option value="Gujarat">Gujarat</option>
-                                <option value="Haryana">Haryana</option>
-                                <option value="Himachal Pradesh">Himachal Pradesh</option>
-                                <option value="Jammu and Kashmir">Jammu and Kashmir</option>
-                                <option value="Jharkhand">Jharkhand</option>
                                 <option value="Kalamassery">Kalamassery</option>
                                 <option value="Kalpetta">Kalpetta</option>
                                 <option value="Kanhangad">Kanhangad</option>
                                 <option value="Kannur">Kannur</option>
-                                <option value="Karnataka">Karnataka</option>
                                 <option value="Karunagappalli">Karunagappalli</option>
                                 <option value="Kasaragod">Kasaragod</option>
                                 <option value="Kattappana">Kattappana</option>
                                 <option value="Kayamkulam">Kayamkulam</option>
-                                <option value="Kerala">Kerala</option>
                                 <option value="Kochi">Kochi</option>
                                 <option value="Kodungallur">Kodungallur</option>
                                 <option value="Kollam">Kollam</option>
@@ -254,24 +217,18 @@
                                 <option value="Koyilandy">Koyilandy</option>
                                 <option value="Kozhikode">Kozhikode</option>
                                 <option value="Kunnamkulam">Kunnamkulam</option>
-                                <option value="Lakshadweep">Lakshadweep</option>
-                                <option value="Madhya Pradesh">Madhya Pradesh</option>
-                                <option value="Maharashtra">Maharashtra</option>
                                 <option value="Malappuram">Malappuram</option>
                                 <option value="Mananthavady">Mananthavady</option>
                                 <option value="Manipur">Manipur</option>
                                 <option value="Manjeri">Manjeri</option>
                                 <option value="Maradu">Maradu</option>
                                 <option value="Mattanur">Mattanur</option>
-                                <option value="Meghalaya">Meghalaya</option>
-                                <option value="Mizoram">Mizoram</option>
                                 <option value="Muvattupuzha">Muvattupuzha</option>
                                 <option value="Nagaland">Nagaland</option>
                                 <option value="Nedumangad">Nedumangad</option>
                                 <option value="Neyyattinkara">Neyyattinkara</option>
                                 <option value="Nilambur">Nilambur</option>
                                 <option value="Nileshwaram">Nileshwaram</option>
-                                <option value="Odisha">Odisha</option>
                                 <option value="Ottappalam">Ottappalam</option>
                                 <option value="Pala">Pala</option>
                                 <option value="Palakkad">Palakkad</option>
@@ -281,18 +238,12 @@
                                 <option value="Pathanamthitta">Pathanamthitta</option>
                                 <option value="Perinthalmanna">Perinthalmanna</option>
                                 <option value="Ponnani">Ponnani</option>
-                                <option value="Puducherry">Puducherry</option>
                                 <option value="Punalur">Punalur</option>
-                                <option value="Punjab">Punjab</option>
-                                <option value="Rajasthan">Rajasthan</option>
                                 <option value="Ramanattukara">Ramanattukara</option>
                                 <option value="Shornur">Shornur</option>
-                                <option value="Sikkim">Sikkim</option>
                                 <option value="Sultan Bathery">Sultan Bathery</option>
                                 <option value="Taliparamba">Taliparamba</option>
-                                <option value="Tamil Nadu">Tamil Nadu</option>
                                 <option value="Tanur">Tanur</option>
-                                <option value="Telangana">Telangana</option>
                                 <option value="Thalassery">Thalassery</option>
                                 <option value="Thiruvananthapuram">Thiruvananthapuram</option>
                                 <option value="Thodupuzha">Thodupuzha</option>
@@ -302,15 +253,10 @@
                                 <option value="Tirur">Tirur</option>
                                 <option value="Tirurangadi">Tirurangadi</option>
                                 <option value="Tiruvalla">Tiruvalla</option>
-                                <option value="Tripura">Tripura</option>
                                 <option value="Uppala">Uppala</option>
-                                <option value="Uttar Pradesh">Uttar Pradesh</option>
-                                <option value="Uttarakhand">Uttarakhand</option>
                                 <option value="Valanchery">Valanchery</option>
                                 <option value="Varkala">Varkala</option>
                                 <option value="Vatakara">Vatakara</option>
-                                <option value="West Bengal">West Bengal</option>
-
 
                             </select>
                         </div>
@@ -318,7 +264,7 @@
                             <input type="date" class=" form-control" name="date" placeholder="Date Of Event" required>
                         </div>
                         <div class="col-md-12">
-                            <textarea class="message form-control" name="message" placeholder="Message:"></textarea>
+                            <textarea class="message form-control" name="message" placeholder="Message:" style="font-size: 25px;"></textarea>
                         </div>
                     </div>
                     <div class="row">
@@ -335,7 +281,6 @@
         </div>
     </div>
 </section>
-
 <footer id="site-footer" class="padding_half bg-dark">
     <div class="container">
         <div class="row">

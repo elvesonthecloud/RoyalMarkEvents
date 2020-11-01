@@ -2003,21 +2003,6 @@ i::before,i::after{
 .form-control {background-color: transparent;}
 .select2-container .select2-selection--single .select2-selection__rendered {font-size: 13px; background-color: #6280a37a;  font-weight: 400;}
 .form-control:focus {background-color: #42969e00;}
-.form-control::-webkit-input-placeholder{
-    font-style: normal;
-}
-.form-control::-moz-placeholder{
-    font-style: normal;
-}
-.form-control:-ms-input-placeholder{
-    font-style: normal;
-}
-.form-control::-ms-input-placeholder{
-    font-style: normal;
-}
-.form-control::placeholder{
-    font-style: normal;
-}
 .ui-state-highlight, .ui-widget-content .ui-state-highlight, .ui-widget-header .ui-state-highlight {
     border: 1px solid #24c4f4;
     background: #24c4f4;
@@ -2130,17 +2115,7 @@ i::before,i::after{
     font-size: 30px;
 }
 
-.message {height: 100px;}
 
-.message::-webkit-input-placeholder {line-height: 30px;}
-
-.message::-moz-placeholder {line-height: 30px;}
-
-.message:-ms-input-placeholder {line-height: 30px;}
-
-.message::-ms-input-placeholder {line-height: 30px;}
-
-.message::placeholder {line-height: 30px;}
 /*type-3*/
 .appoint-card.type-3 {
     top: 0;
