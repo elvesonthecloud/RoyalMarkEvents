@@ -329,7 +329,7 @@
                     "Content-Type": "application/json",
                     "Authorization": "Token " + token
                 },
-                body: JSON.stringify(formData),
+                body: formData,
             }).then(resp => resp.json()).then(resp => {
                 if (resp.data) {
                     alert("Message sent successfully!");
