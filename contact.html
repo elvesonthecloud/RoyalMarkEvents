@@ -339,26 +339,26 @@
         $('#form').submit(function (e) {
             e.preventDefault();
             let formData = $('#form').serialize();
-           document.getElementById('msg-spinner').style.display = '';
-        let url = 'https://elves-on-the-cloud.herokuapp.com/contact/';
-        let token = '075bc81c94dd494af98876db7d51d86ca66ae5a3';
-        formData['from royal']=true;
-        fetch(url, {
-            method: 'POST',
-            headers:{
-                "Content-Type": "application/json",
-                "Authorization":"Token "+token
-            },
-            body: JSON.stringify(formData),
-          }).then(resp => resp.json()).then(resp => {
-            if (resp.data) {
-                alert("Message sent successfully!");
-            } else {
-                console.log(resp.message);
-                alert("Something went wrong!\n Please try again.");
-            }
-          }).then(()=>document.getElementById('msg-spinner').style.display = 'none')
- })
+            document.getElementById('msg-spinner').style.display = '';
+            let url = 'https://elves-on-the-cloud.herokuapp.com/contact/';
+            let token = '075bc81c94dd494af98876db7d51d86ca66ae5a3';
+            formData['from royal'] = true;
+            fetch(url, {
+                method: 'POST',
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Token " + token
+                },
+                body: JSON.stringify(formData),
+            }).then(resp => resp.json()).then(resp => {
+                if (resp.data) {
+                    alert("Message sent successfully!");
+                } else {
+                    console.log(resp.message);
+                    alert("Something went wrong!\n Please try again.");
+                }
+            }).then(() => document.getElementById('msg-spinner').style.display = 'none')
+        });
     });
 </script>
 </body>
