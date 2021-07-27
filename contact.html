@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -158,17 +159,17 @@
                 <form id="form">
                     <div class="row">
                         <div class="col-md-12">
-                            <input type="text" class="form-control" name="name" placeholder="Name" required>
+                            <input type="text" class="form-control" id="name" name="name" placeholder="Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control" name="email" placeholder="email" required>
+                            <input type="email" class="form-control" id="email" name="email" placeholder="email" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="number" class="form-control" name="mobile" placeholder="Contact Number"
+                            <input type="number" class="form-control" id="mobile" name="mobile" placeholder="Contact Number"
                                    required>
                         </div>
                         <div class="col-md-6">
-                            <select class="form-control" name="location" required style="font-size: 25px;">
+                            <select class="form-control" id="location" name="location" required style="font-size: 25px;">
                                 <option>--------- Select Location ----------</option>
                                 <option value="Adoor">Adoor</option>
                                 <option value="Alappuzha">Alappuzha</option>
@@ -240,13 +241,12 @@
                             </select>
                         </div>
                         <div class="col-md-6">
-                            <input type="date" class=" form-control" name="date" placeholder="Date Of Event" required>
+                            <input type="date" class=" form-control" id="date" name="date" placeholder="Date Of Event" required>
                         </div>
                         <div class="col-md-12">
-                            <textarea class="message form-control" name="message" placeholder="Message:" style="font-size: 25px;"></textarea>
+                            <textarea class="message form-control" id="message" name="message" placeholder="Message:" style="font-size: 25px;"></textarea>
                         </div>
                     </div>
-                    <input type="hidden" value="" name="from rme" id="from rme"/>
                     <div class="row">
                         <div class="col-md-12 text-center text-center">
                             <div id="msg-spinner" style="display:none;">
@@ -318,7 +318,15 @@
     $(document).ready(function () {
         $('#form').submit(function (e) {
             e.preventDefault();
-            let formData = $('#form').serialize();
+            let formData = {
+                'name':$('#name').val(),
+                'email':$('#email').val(),
+                'mobile':$('#mobile').val(),
+                'date':$('#date').val(),
+                'location':$('#location').val(),
+                'message':$('#message').val(),
+                'from rme':true,
+            }
             document.getElementById('msg-spinner').style.display = '';
             let url = 'https://elves-on-the-cloud-server.herokuapp.com/contact/';
             let token = '075bc81c94dd494af98876db7d51d86ca66ae5a3';
@@ -329,7 +337,7 @@
                     "Content-Type": "application/json",
                     "Authorization": "Token " + token
                 },
-                body: formData,
+                body: JSON.stringify(formData),
             }).then(resp => resp.json()).then(resp => {
                 if (resp.data) {
                     alert("Message sent successfully!");
@@ -343,4 +351,5 @@
 </script>
 </body>
 </html>
+
 
