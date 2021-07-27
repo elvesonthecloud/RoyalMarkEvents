@@ -334,12 +334,11 @@
 <script src="vendor/js/flip.js"></script>
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB4fusEY9kSwNHgtK8KOgyoTsyP5Tb2NXo"></script>
 <script src="js/map.js"></script>
-<script src="js/functions.js"></script>
 <script>
     $(document).ready(function () {
         $('#form').submit(function (e) {
             e.preventDefault();
-            let formData = $('#form').serialize());
+            let formData = $('#form').serialize();
            document.getElementById('msg-spinner').style.display = '';
         let url = 'https://elves-on-the-cloud.herokuapp.com/contact/';
         let token = '075bc81c94dd494af98876db7d51d86ca66ae5a3';
@@ -359,7 +358,7 @@
                 alert("Something went wrong!\n Please try again.");
             }
           }).then(()=>document.getElementById('msg-spinner').style.display = 'none')
- 
+ })
     });
 </script>
 </body>
