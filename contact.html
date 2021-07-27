@@ -340,7 +340,7 @@
             e.preventDefault();
             let formData = $('#form').serialize();
             document.getElementById('msg-spinner').style.display = '';
-            let url = 'https://elves-on-the-cloud.herokuapp.com/contact/';
+            let url = 'https://elves-on-the-cloud-server.herokuapp.com/contact/';
             let token = '075bc81c94dd494af98876db7d51d86ca66ae5a3';
             formData['from royal'] = true;
             fetch(url, {
